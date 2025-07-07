@@ -51,6 +51,20 @@ a{
     line-height: 1.27;
     letter-spacing: -0,76;
 }
+.line-clamp{/* muốn cái nào giới hạn 1 dòng thì bỏ tên class vào */
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp,1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* muốn thay thành 2 dòng mới hiện ... thì  */
+.line-clamp.line-2{
+    /* sd đồng thời 2 class mới có tác dụng */
+    --line-clamp: 2;
+}
+.break-all{
+    word-break: break-all;
+}
 
 /* ===============header==================== */
 .header{
@@ -295,6 +309,7 @@ a{
     gap: 30px;
 }
 .popular .item-courses{
+    flex: 1;
     border-radius: 12px;
     border: 1px solid #e2dfda;
     background: #fff;
@@ -354,6 +369,84 @@ a{
 .popular .item-courses .btn-popular-item:hover{
     background: var(--color-vang);
 }
+
+
+/* ===================FEEDBACK========================= */
+.feedback{
+    padding: 96px 0;
+    margin-top: 135px;
+    height: 380;
+    top: 1945px;
+    opacity: 1;
+    background: #2E2100;
+}
+.feedback-item{
+    display: flex;
+}
+.feedback-item .avatar{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.feedback-item .info .member-name{
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.42;
+    font-size: 2.4rem;
+}
+.feedback-item .info .desc{
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+.feedback-item .dots{
+    gap: 6px;  
+    display: flex;
+    margin-top: 28px;
+}
+.feedback-item .dot{
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+.feedback-item .dot.active{
+    background: var(--color-vang);
+    cursor: default;
+}
+.feedback-item .content{
+    width: 66%;
+    margin-left: auto;
+}
+.feedback-item .blockquote{
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1.54;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
