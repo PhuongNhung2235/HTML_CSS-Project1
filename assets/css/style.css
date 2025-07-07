@@ -380,8 +380,13 @@ a{
     opacity: 1;
     background: #2E2100;
 }
+.feedback-list{
+    overflow: hidden;
+    display: flex;
+}
 .feedback-item{
     display: flex;
+    flex-shrink: 0;
 }
 .feedback-item .avatar{
     width: 72px;
