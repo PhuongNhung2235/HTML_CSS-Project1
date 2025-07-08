@@ -408,19 +408,22 @@ a{
     font-size: 1.4rem;
     line-height: 1.86;
 }
-.feedback-item .dots{
+.feedback-item .dots,
+.blogs .dots{
     gap: 6px;  
     display: flex;
     margin-top: 28px;
 }
-.feedback-item .dot{
+.feedback-item .dot,
+.blogs .dots .dot{
     height: 6px;
     width: 6px;
     border-radius: 50%;
     background: #634700;
     cursor: pointer;
 }
-.feedback-item .dot.active{
+.feedback-item .dot.active,
+.blogs .dots .dot.active{
     background: var(--color-vang);
     cursor: default;
 }
@@ -509,12 +512,14 @@ a{
     line-height: 1.75;
 }
 .blogs .blog-list{
+    overflow: hidden;
     display: flex;
     margin-top: 55px;
     gap: 30px; /*các thẻ con cách nhau 30px */
 }
 .blogs .blog-item{
-    width: 33.33%;
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
     border-radius: 16px;
     background: #fff;
 }
@@ -569,12 +574,20 @@ a{
 }
 .blogs .blog-item .btn{
     margin-top: 12px;
+    font-size: 1.4rem;
+
 }
 .blogs .blog-item .btn:hover{
     background: var(--color-vang);
 }
-
-
+.blogs .dots{
+    /* display: flex;
+    gap: 6px;
+    đã có ở trên feedback */
+    justify-content: center;
+    margin-top: 38px;
+}
+/* ..blogs .dots .dot và .blogs .dots .dot.active tương tự có ở feedback */
 
 
 
